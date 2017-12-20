@@ -25,7 +25,7 @@
 						<label for="imageUrl">Photo Image URL (required)</label>
 						<input type="text" class="form-control" id="imageUrl">
 					</div>
-					<p>Indicate on scale of 1 to 5 whether you agree or disagree with the following statements. Selecting 1 indicates strong disagreement with the statement. Answering 5 indicates strong agreement with the statement.</p>
+					<p>Indicate on scale of 1 to 5 whether you agree or disagree with the following statements. Selecting 1 indicates strong disagreement with the statement. Selecting 5 indicates strong agreement with the statement.</p>
 					<div class="form-group" id="q1">
 						<h3>Question 1</h3>
 						<label>I like dogs.</label><br />
@@ -132,11 +132,11 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h2 class="modal-title">Best Match</h2>
+					<h2 class="modal-title">Your Best Match</h2>
 		        </div>
 		        <div class="modal-body">
 					<h3 id="matchName">Some text in the modal.</h3>
-					<img id="matchImg" src="">
+					<img class="img-responsive" id="matchImg" src="">
 		        </div>
 		        <div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -172,7 +172,6 @@
 					type: "POST",
 					contentType: 'application/json'
 				}).done(function(data, status, xhr) {
-					// console.log(status, data);
 					console.log(data.name, data.imageUrl);
 					$("#matchName").text(data.name);
 					$("#matchImg").attr("src", data.imageUrl);

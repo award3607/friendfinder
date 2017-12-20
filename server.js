@@ -11,18 +11,6 @@ var PORT = process.env.PORT || 3000;
 var app = express();
 app.use(apiRoutes);
 app.use(htmlRoutes);
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-
-
-
-
-
-
-
-
-
-
 
 app.listen(PORT, function() {
 	console.log("Friend Finder App listening on PORT " + PORT);

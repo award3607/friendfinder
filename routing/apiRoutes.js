@@ -19,9 +19,7 @@ router.get('/api/friends', function(req, res){
 });
 
 router.post('/api/friends', jsonParser, function(req, res){
-	//stuff to add a friend
 	let friends = [];
-	// console.log(req.body);
 	let friend = JSON.parse(JSON.stringify(req.body));
 
 	fs.readFile('./data/friends.js', 'utf8', function(err, data) {
@@ -35,15 +33,12 @@ router.post('/api/friends', jsonParser, function(req, res){
 		friends = JSON.parse(data);
 		let match = findFriend(friend, friends);
 		friends.push(friend);
-		// console.log(friends);
 		fs.writeFile('./data/friends.js', JSON.stringify(friends), 'utf8', (err) => {
 			if (err) {
 				console.log(err);
 				res.status(500).json(err);
 			}
 			res.status(201).json(match);
-
-			//the response should contain the newly added person's best match
 		});
 	});
 });
