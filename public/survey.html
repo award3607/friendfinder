@@ -1,0 +1,174 @@
+<!-- I like dogs
+I like cats
+I like chocolate
+I like vanilla
+I like Christmas
+I like parties
+I like balloons
+I like fixing things
+I like being with people
+I like Pokemon
+I like my dad
+I like my mom
+I like houses
+I like trees
+I like computers -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acquaintance Acquirer</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Acquaintance Acquirer</h1>		
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h2 class="panel-title"><strong>Survey questions</strong></h2>
+			</div>
+			<div class="panel-body">
+				<form id="survey">
+					<div class="form-group">
+						<label for="name">Name (required)</label>
+						<input type="text" class="form-control" id="name">
+					</div>
+					<div class="form-group">
+						<label for="imageUrl">Photo Image URL (required)</label>
+						<input type="text" class="form-control" id="imageUrl">
+					</div>
+					<p>Indicate on scale of 1 to 5 whether you agree or disagree with the following statements. Selecting 1 indicates strong disagreement with the statement. Answering 5 indicates strong agreement with the statement.</p>
+					<div class="form-group" id="q1">
+						<h3>Question 1</h3>
+						<label>I like dogs.</label><br />
+						<label class="radio-inline"><input type="radio" name="q1" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q1" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q1" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q1" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q1" value="5">5</label>
+					</div>
+					<div class="form-group" id="q2">
+						<h3>Question 2</h3>
+						<label>I like cats.</label><br />
+						<label class="radio-inline"><input type="radio" name="q2" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q2" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q2" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q2" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q2" value="5">5</label>
+					</div>
+					<div class="form-group" id="q3">
+						<h3>Question 3</h3>
+						<label>I like chocolate.</label><br />
+						<label class="radio-inline"><input type="radio" name="q3" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q3" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q3" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q3" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q3" value="5">5</label>
+					</div>
+					<div class="form-group" id="q4">
+						<h3>Question 4</h3>
+						<label>I like vanilla.</label><br />
+						<label class="radio-inline"><input type="radio" name="q4" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q4" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q4" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q4" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q4" value="5">5</label>
+					</div>
+					<div class="form-group" id="q5">
+						<h3>Question 5</h3>
+						<label>I like parties.</label><br />
+						<label class="radio-inline"><input type="radio" name="q5" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q5" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q5" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q5" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q5" value="5">5</label>
+					</div>
+					<div class="form-group" id="q6">
+						<h3>Question 6</h3>
+						<label>I like balloons.</label><br />
+						<label class="radio-inline"><input type="radio" name="q6" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q6" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q6" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q6" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q6" value="5">5</label>
+					</div>
+					<div class="form-group" id="q7">
+						<h3>Question 7</h3>
+						<label>I like being with people.</label><br />
+						<label class="radio-inline"><input type="radio" name="q7" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q7" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q7" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q7" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q7" value="5">5</label>
+					</div>
+					<div class="form-group" id="q8">
+						<h3>Question 8</h3>
+						<label>I like Pokemon.</label><br />
+						<label class="radio-inline"><input type="radio" name="q8" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q8" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q8" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q8" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q8" value="5">5</label>
+					</div>
+					<div class="form-group" id="q9">
+						<h3>Question 9</h3>
+						<label>I like trees.</label><br />
+						<label class="radio-inline"><input type="radio" name="q9" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q9" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q9" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q9" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q9" value="5">5</label>
+					</div>
+					<div class="form-group" id="q10">
+						<h3>Question 10</h3>
+						<label>I like computers.</label><br />
+						<label class="radio-inline"><input type="radio" name="q10" value="1">1</label>
+						<label class="radio-inline"><input type="radio" name="q10" value="2">2</label>
+						<label class="radio-inline"><input type="radio" name="q10" value="3">3</label>
+						<label class="radio-inline"><input type="radio" name="q10" value="4">4</label>
+						<label class="radio-inline"><input type="radio" name="q10" value="5">5</label>
+					</div>
+					<input type="submit">
+				</form>
+
+			</div>
+			
+		</div>
+		<footer>
+			<p><a href="/api/friends">API Friends List</a>
+		</footer>
+	</div>
+	<script type="text/javascript">
+		$("#survey").on("submit", function(event) {
+			event.preventDefault();
+			let survey = {
+				name: $("#name").val().trim(),
+				imageUrl: $("#imageUrl").val().trim(),
+				q1: $("#q1 input:checked").val(),
+				q2: $("#q2 input:checked").val(),
+				q3: $("#q3 input:checked").val(),
+				q4: $("#q4 input:checked").val(),
+				q5: $("#q5 input:checked").val(),
+				q6: $("#q6 input:checked").val(),
+				q7: $("#q7 input:checked").val(),
+				q8: $("#q8 input:checked").val(),
+				q9: $("#q9 input:checked").val(),
+				q10: $("#q10 input:checked").val()
+			};
+			let jSurvey = JSON.stringify(survey);
+			$.ajax("/api/friends", {
+				data: jSurvey,
+				type: "POST",
+				contentType: 'application/json'
+			}).done(function(data, status, xhr) {
+				console.log(xhr);
+			});
+	    });
+	</script>
+
+</body>
+</html>
