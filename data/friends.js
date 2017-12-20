@@ -1,15 +1,1 @@
-[
-	{
-		"name": "Andrew",
-		"age": 37
-	},
-	{
-		"name": "John",
-		"age": 40
-	},
-	{
-		"name": "Jane",
-		"age": 50
-	}
-]
-[{"name":"Andrew","age":37},{"name":"John","age":40},{"name":"Jane","age":50},{"name":"Test","imageUrl":"Image","q1":"1","q2":"1","q3":"1","q4":"1","q5":"1","q6":"1","q7":"1","q8":"1","q9":"1","q10":"1"}]
+[{"name":"Test","imageUrl":"Image","answers":[1,1,1,1,1,1,1,1,1,1]},{"name":"Test2","imageUrl":"Image2","answers":[2,2,2,2,2,2,2,2,2,2]},{"name":"A","imageUrl":"A","answers":[1,1,1,1,1,1,1,1,1,1]},{"name":"B","imageUrl":"B","answers":[1,1,1,1,1,1,1,1,1,1]},{"name":"C","imageUrl":"C","answers":[4,4,4,4,4,4,4,4,4,4]},{"name":"D","imageUrl":"D","answers":[5,5,5,5,5,5,5,5,5,5]},{"name":"John","imageUrl":"Image","answers":[1,2,3,4,5,4,3,2,1,2]},{"name":"Joe","imageUrl":"Image5","answers":[1,2,1,3,1,4,1,5,1,3]},{"name":"Jake","imageUrl":"imasdlk","answers":[2,2,3,1,4,5,3,3,2,4]},{"name":"Jake","imageUrl":"imasdlk","answers":[2,2,3,1,4,5,3,3,2,4]},{"name":"Jake","imageUrl":"imasdlk","answers":[2,2,3,1,4,5,3,3,2,4]}]

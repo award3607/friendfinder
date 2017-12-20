@@ -1,19 +1,3 @@
-<!-- I like dogs
-I like cats
-I like chocolate
-I like vanilla
-I like Christmas
-I like parties
-I like balloons
-I like fixing things
-I like being with people
-I like Pokemon
-I like my dad
-I like my mom
-I like houses
-I like trees
-I like computers -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -142,32 +126,60 @@ I like computers -->
 			<p><a href="/api/friends">API Friends List</a>
 		</footer>
 	</div>
+
+	<div class="modal" id="friendModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h2 class="modal-title">Best Match</h2>
+		        </div>
+		        <div class="modal-body">
+					<h3 id="matchName">Some text in the modal.</h3>
+					<img id="matchImg" src="">
+		        </div>
+		        <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+
+
 	<script type="text/javascript">
-		$("#survey").on("submit", function(event) {
-			event.preventDefault();
-			let survey = {
-				name: $("#name").val().trim(),
-				imageUrl: $("#imageUrl").val().trim(),
-				q1: $("#q1 input:checked").val(),
-				q2: $("#q2 input:checked").val(),
-				q3: $("#q3 input:checked").val(),
-				q4: $("#q4 input:checked").val(),
-				q5: $("#q5 input:checked").val(),
-				q6: $("#q6 input:checked").val(),
-				q7: $("#q7 input:checked").val(),
-				q8: $("#q8 input:checked").val(),
-				q9: $("#q9 input:checked").val(),
-				q10: $("#q10 input:checked").val()
-			};
-			let jSurvey = JSON.stringify(survey);
-			$.ajax("/api/friends", {
-				data: jSurvey,
-				type: "POST",
-				contentType: 'application/json'
-			}).done(function(data, status, xhr) {
-				console.log(xhr);
+		$(document).ready(function() {
+			$("#survey").on("submit", function(event) {
+				event.preventDefault();
+				let survey = {
+					name: $("#name").val().trim(),
+					imageUrl: $("#imageUrl").val().trim(),
+					answers: [
+						parseInt($("#q1 input:checked").val()),
+						parseInt($("#q2 input:checked").val()),
+						parseInt($("#q3 input:checked").val()),
+						parseInt($("#q4 input:checked").val()),
+						parseInt($("#q5 input:checked").val()),
+						parseInt($("#q6 input:checked").val()),
+						parseInt($("#q7 input:checked").val()),
+						parseInt($("#q8 input:checked").val()),
+						parseInt($("#q9 input:checked").val()),
+						parseInt($("#q10 input:checked").val())
+					]
+				};
+				let jSurvey = JSON.stringify(survey);
+				$.ajax("/api/friends", {
+					data: jSurvey,
+					type: "POST",
+					contentType: 'application/json'
+				}).done(function(data, status, xhr) {
+					// console.log(status, data);
+					console.log(data.name, data.imageUrl);
+					$("#matchName").text(data.name);
+					$("#matchImg").attr("src", data.imageUrl);
+					$("#friendModal").modal();
+				});
 			});
-	    });
+		});
 	</script>
 
 </body>

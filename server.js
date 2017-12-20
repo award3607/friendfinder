@@ -11,8 +11,8 @@ var PORT = 3000;
 var app = express();
 app.use(apiRoutes);
 app.use(htmlRoutes);
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
 
 
 
